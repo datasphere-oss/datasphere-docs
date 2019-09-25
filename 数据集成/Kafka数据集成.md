@@ -33,7 +33,7 @@ ____________________________
 
 1. 在config 目录中修改 consumer.properties中的zookeeper 连接地址
 
-2. 进入到在 Stream/Kafka/bin目录下, 输入如下命令
+2. 进入到在 Integration/Kafka/bin目录下, 输入如下命令
 sudo ./kafka-console-consumer.sh --topic mysqlstream  --zookeeper 127.0.0.1:2181 --from-beginning
 其中 kafka 的 topic 名称为 mysqlstream 。 
 
