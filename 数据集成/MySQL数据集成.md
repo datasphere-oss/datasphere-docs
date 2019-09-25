@@ -1,55 +1,55 @@
-### Oracle数据集成介绍
+### MySQL数据集成介绍
 ____________________________
 
-
-#### Oracle同步到MySQL
+#### MySQL同步到MySQL
 ____________________________
 
 * 配置数据库源端
 
-1. 选择Oracle数据库作为源端数据库
-2. 为数据源命名: OracleSource
-3. 选择处理器: OracleReader
-4. 填写源端数据库的用户名: scott
-5. 填写连接数据库的 JDBC 驱动 URL: 192.168.0.1:1521:orcl
-6. 填写数据库需要同步的表: SCOTT.TEST
+1. 选择MySQL数据库作为源端数据库
+2. 为数据源命名: MySQLSource
+3. 选择处理器: MySQLReader
+4. 填写源端数据库的用户名: root
+5. 填写连接数据库的 JDBC 驱动 URL: 192.168.0.1:3306:mydb
+6. 填写数据库需要同步的表: ROOT.TEST
 7. 填写源端数据库的密码:*******
 
 * 配置数据库目标端
 
-1. 选择输入流为:OracleStream
+1. 选择输入流为:MySQLStream
 2. 选择处理器: DatabaseWriter
 3. 为数据目标命名: HashdataTarget
 4. 填写目标数据库的用户名: root
-5. 填写连接目标数据库的 JDBC 驱动 URL: 192.168.0.1:3306/mydb
-6. 填写目标数据库的表清单: SCOTT.TEST,ROOT.TEST;
+5. 填写连接目标数据库的 JDBC 驱动 URL: 192.168.0.2:3306/mydb
+6. 填写目标数据库的表清单: ROOT.TEST,ROOT.TEST;
 7. 填写目标数据库的密码:*******
 8. 根据你的需要设置同步参数：
 
 > 批量策略: EventCount:1,Interval:0
 
 
-#### Oracle同步到PostgreSQL
+#### MySQL同步到PostgreSQL
 ____________________________
 
 * 配置数据库源端
 
-1. 选择Oracle数据库作为源端数据库
-2. 为数据源命名: OracleSource
-3. 选择处理器: OracleReader
-4. 填写源端数据库的用户名: scott
-5. 填写连接数据库的 JDBC 驱动 URL: 192.168.0.1:1521:orcl
-6. 填写数据库需要同步的表: SCOTT.TEST
+1. 选择MySQL数据库作为源端数据库
+2. 为数据源命名: MySQLSource
+3. 选择处理器: MySQLReader
+4. 填写源端数据库的用户名: root
+5. 填写连接数据库的 JDBC 驱动 URL: 192.168.0.1:3306:mydb
+6. 填写数据库需要同步的表: ROOT.TEST
 7. 填写源端数据库的密码:*******
+
 
 * 配置数据库目标端
 
-1. 选择输入流为:OracleStream
+1. 选择输入流为:MySQLStream
 2. 选择处理器: DatabaseWriter
 3. 为数据目标命名: PostgreSQLTarget
 4. 填写目标数据库的用户名: root
 5. 填写连接目标数据库的 JDBC 驱动 URL: jdbc:postgresql://192.168.0.2:5432/postgres
-6. 填写目标数据库的表清单: SCOTT.TEST,POSTGRES.TEST;
+6. 填写目标数据库的表清单: ROOT.TEST,POSTGRES.TEST;
 7. 填写目标数据库的密码:*******
 8. 根据你的需要设置同步参数：
 
@@ -59,57 +59,60 @@ ____________________________
 
 
 
-#### Oracle同步到Hashdata
+#### MySQL同步到Hashdata
 ____________________________
 
 * 配置数据库源端
 
-1. 选择Oracle数据库作为源端数据库
-2. 为数据源命名: OracleSource
-3. 选择处理器: OracleReader
-4. 填写源端数据库的用户名: scott
-5. 填写连接数据库的 JDBC 驱动 URL: 192.168.0.1:1521:orcl
-6. 填写数据库需要同步的表: SCOTT.TEST
+1. 选择MySQL数据库作为源端数据库
+2. 为数据源命名: MySQLSource
+3. 选择处理器: MySQLReader
+4. 填写源端数据库的用户名: root
+5. 填写连接数据库的 JDBC 驱动 URL: 192.168.0.1:3306:mydb
+6. 填写数据库需要同步的表: ROOT.TEST
 7. 填写源端数据库的密码:*******
+
 
 * 配置数据库目标端
 
-1. 选择输入流为:OracleStream
+1. 选择输入流为:MySQLStream
 2. 选择处理器: DatabaseWriter
 3. 为数据目标命名: HashdataTarget
 4. 填写目标数据库的用户名: gpadmin
 5. 填写连接目标数据库的 JDBC 驱动 URL: jdbc:postgresql://192.168.0.2:5432/gpadmin
-6. 填写目标数据库的表清单: SCOTT.TEST,GPADMIN.TEST;
+6. 填写目标数据库的表清单: ROOT.TEST,GPADMIN.TEST;
 7. 填写目标数据库的密码:*******
 8. 根据你的需要设置同步参数：
 
 > 批量策略: EventCount:1,Interval:0
 
 
-#### Oracle同步到Hive
+#### MySQL同步到Hive
 ____________________________
 
 * 配置数据库源端
 
-1. 选择Oracle数据库作为源端数据库
-2. 为数据源命名: OracleSource
-3. 选择处理器: OracleReader
-4. 填写源端数据库的用户名: scott
-5. 填写连接数据库的 JDBC 驱动 URL: 192.168.0.1:1521:orcl
-6. 填写数据库需要同步的表: SCOTT.TEST
+1. 选择MySQL数据库作为源端数据库
+2. 为数据源命名: MySQLSource
+3. 选择处理器: MySQLReader
+4. 填写源端数据库的用户名: root
+5. 填写连接数据库的 JDBC 驱动 URL: 192.168.0.1:3306:mydb
+6. 填写数据库需要同步的表: ROOT.TEST
 7. 填写源端数据库的密码:*******
+
 
 * 配置数据库目标端
 
-1. 选择输入流为:OracleStream
+1. 选择输入流为:MySQLStream
 2. 选择处理器: HiveWriter
 3. 为数据目标命名: HiveTarget
 4. 填写目标数据库的用户名: 
 5. 填写连接目标数据库的 JDBC 驱动 URL: jdbc:hive2://192.168.0.2:10000/hive
-6. 填写目标数据库的表清单: SCOTT.TEST,HIVE.TEST;
+6. 填写目标数据库的表清单: ROOT.TEST,HIVE.TEST;
 7. 填写目标数据库的密码:*******
 8. 根据你的需要设置同步参数：
 
 > 批量策略: EventCount:1,Interval:0
+
 
 
